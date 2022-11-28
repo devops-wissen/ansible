@@ -1,0 +1,13 @@
+---
+- name: httpd installation & service started
+  hosts: all
+  become: true
+  tasks:
+  - name: install httpd
+    TYPE: 
+        name: httpd
+        state: latest 
+  - name: service httpd
+    service:
+        name: httpd
+        state: started
